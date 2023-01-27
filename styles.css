@@ -1,0 +1,160 @@
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container-fluid{
+    padding: 0;
+}
+
+/* Sections */
+
+.colored-section{
+    background-color: rgb(34, 34, 34);
+    color: white;
+}
+
+.white-section{
+    background-color: white;
+    color: rgb(34, 34, 34) ;
+}
+
+/* Headings */
+
+.main-heading{
+    text-transform: uppercase;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 4rem;
+    margin: 20%  auto 3%;
+}
+
+.sub-heading{
+    padding-bottom: 20%;
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+
+.section-heading{
+    font-size: 2.5rem;
+    padding: 3.5%;
+    text-align: center;
+    font-weight: 700;
+}
+
+.cost-calc-heading{
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    margin: 3% auto 5%;
+}
+
+.position-heading{
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    margin: 3% auto 5%;
+}
+
+/* Nav Bar */
+
+.navbar{
+    padding: 0.5% 5%;
+}
+
+.navbar-brand{
+    font-weight: 700;
+}
+
+.nav-item{
+    margin-left: 20px;
+}
+
+.navbar-toggler{
+    background-color: rgb(155, 155, 155);
+}
+
+/* Title */
+
+.title-section{
+    text-align: center;
+}
+
+/* Cost calculator */
+
+#cost-calculator{
+    padding-bottom: 2%;
+}
+
+.row.cost-calc-row{
+    margin: 0 3% 3%;
+    background-color: rgb(218, 218, 218);
+    padding: 2%;
+    color: rgb(34, 34, 34);
+    border-radius: 20px;
+}
+
+.cost-results{
+    margin: auto;
+}
+
+.cost-inputs{
+    margin: auto;
+}
+
+.cost-results-text{
+    margin: 5% auto;
+    font-weight: 600;
+}
+
+.cost-calc-form{
+    margin: 3% auto;
+}
+
+.form-label{
+    font-size: 1.2rem;
+}
+
+.form-check-label{
+    font-size: 1.2rem;
+}
+
+.form-check-input{
+    margin-top: 8px;    
+}
+
+.cost-sub-section{
+    margin-bottom: 7%;
+}
+
+/* Position Calculator */
+
+#position-size-calculator{
+    padding-bottom: 2%;
+}
+
+.row.position-row{
+    margin: 0 3% 3%;
+    background-color: rgb(52, 52, 52);
+    padding: 2%;
+    color: rgb(221, 221, 221);
+    border-radius: 20px;
+}
+
+@media(max-width: 576px){
+
+    .main-heading{
+        font-size: 2rem;
+    }
+    
+    .sub-heading{
+        font-size: 1.5rem;
+    }
+    
+    .section-heading{
+        font-size: 1.5rem;
+
+    }
+
+    .cost-results-text{
+        font-size: 1.1rem;
+    }
+}
