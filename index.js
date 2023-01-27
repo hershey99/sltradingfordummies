@@ -1,10 +1,12 @@
 
-$("#cost-btn").click(function(){
+$("#cost-btn").click(function(e){
     calcCost();
+    e.preventDefault();
 });
 
-$("#position-btn").click(function () {
+$("#position-btn").click(function (e) {
     calcLotSize();
+    e.preventDefault();
 });
 
 var tradingRadioId = "tradingTypeRadio1";
