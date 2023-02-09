@@ -42,11 +42,6 @@ function calcCost(){
         avgProfitPer = (avgPriceSell - avgPrice).toFixed(2);
     }
 
-    netAmount = netAmount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    avgPrice = avgPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    netAmountSell = netAmountSell.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    avgPriceSell = avgPriceSell.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-
     $("#netAmountSell").text("Sell - Net Amount = Rs. " + netAmountSell);
     $("#avgPriceSell").text("Average Price per Share = Rs. " + avgPriceSell);
     $("#netProfitPL").text("Net Profit/Loss = Rs. " + netProfitPL);
@@ -67,23 +62,17 @@ function calcLotSize(){
     var BPriceCom = positionBuyPrice * 1.0112;
     var STPriceCom = positionStopPrice * 0.9888;
     var RRV = (BPriceCom - STPriceCom) * riskReward;
-    var sellPriceCom = ((BPriceCom + RRV)).toFixed(4);
+    var sellPriceCom = ((BPriceCom + RRV)).toFixed(2);
 
-    var lotSize = ((accountBalance*(allocationPer/100))/(positionBuyPrice)).toFixed(4);
-    var positionSize = (lotSize*positionBuyPrice).toFixed(4);
+    var lotSize = ((accountBalance*(allocationPer/100))/(BPriceCom)).toFixed(2);
+    var positionSize = (lotSize*BPriceCom).toFixed(2);
 
-    var riskedPS = (BPriceCom-STPriceCom).toFixed(4);
+    var riskedPS = (BPriceCom-STPriceCom).toFixed(2);
 
-    var profitPT = ((lotSize*sellPriceCom) - (lotSize*BPriceCom)).toFixed(4);
+    var profitPT = ((lotSize*sellPriceCom) - (lotSize*BPriceCom)).toFixed(2);
 
-    var lossPT = ((lotSize*BPriceCom) - (lotSize*STPriceCom)).toFixed(4);
+    var lossPT = ((lotSize*BPriceCom) - (lotSize*STPriceCom)).toFixed(2);
 
-    sellPriceCom = sellPriceCom.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    lotSize = lotSize.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    positionSize = positionSize.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    riskedPS = riskedPS.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    profitPT = profitPT.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    lossPT = lossPT.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
     $("#lotSellValue").text("Sell Price = Rs. "+ sellPriceCom);
     $("#lotSize").text("Max # Shares To Buy (Lot Size) = "+ lotSize);
