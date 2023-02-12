@@ -139,6 +139,36 @@ body{
     border-radius: 20px;
 }
 
+/* footer */
+
+.socials-wft{
+    font-size: 2rem;
+}
+
+.footer-content{
+    margin: 20px auto;
+}
+
+.footer-content p{
+    margin-bottom: 5px;
+}
+
+.footer-content h5{
+    font-weight: 700;
+}
+
+.fa-whatsapp{
+    color: #25D366;
+}
+
+.fa-twitter{
+    color: #00acee;
+}
+
+.fa-facebook{
+    color: #3b5998;
+}
+
 @media(max-width: 576px){
 
     .main-heading{
@@ -156,5 +186,9 @@ body{
 
     .cost-results-text{
         font-size: 1.1rem;
+    }
+
+    .socials-wft{
+        font-size: 1rem;
     }
 }
