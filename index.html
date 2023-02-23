@@ -32,6 +32,9 @@
                         <li class="nav-item">
                         <a class="nav-link" href="#position-size-calculator">Position Size Calculator</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#rca-calculator">RCA Calculator</a>
+                        </li>
                     </ul>
                 </div>
                 </div>
@@ -140,7 +143,32 @@
             </div>
     </section>
 
-    <footer class="white-section">
+    <section class="white-section" id="rca-calculator">
+        <h2 class="section-heading">Rupee Cost Average Calculator</h2>
+            <div class="row cost-calc-row ">
+                <div class="col-lg-4 cost-inputs">
+                    <form>
+                          <h5 class="cost-calc-heading">RCA Calculator Inputs</h5>
+                            <div class="mb-3 cost-calc-form">
+                                <label for="exampleFormControlInput1" class="form-label" >Enter the fixed Rupee Amount</label>
+                                <input type="text" class="form-control" id="rcaRupeeAmount" placeholder="">
+                            </div>
+                            <div class="mb-3 cost-calc-form">
+                                <label for="exampleFormControlInput1" class="form-label">Buy Price</label>
+                                <input type="text" class="form-control" id="rcaBuyPrice" placeholder="">
+                            </div>
+    
+                            <button type="submit" id="rca-btn" class="btn btn-dark cost-calc-form">Calculate</button> 
+                    </form>
+                </div>
+                <div class="col-lg-8 text-end cost-results">
+                    <h4 class="cost-results-text" id="rcaPriceCost">Price + Cost = Rs 0.00</h4>
+                    <h4 class="cost-results-text" id="rcaQuantity">Buying Quantity = 0.00</h4>
+                </div>
+            </div>
+    </section>
+
+    <footer class="colored-section">
         <div class="container text-center">
             <div class="row">
               <div class="col-md-4 footer-content">

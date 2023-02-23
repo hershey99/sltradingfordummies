@@ -9,6 +9,11 @@ $("#position-btn").click(function (e) {
     e.preventDefault();
 });
 
+$("#rca-btn").click(function (e) {
+    rca();
+    e.preventDefault();
+});
+
 var tradingRadioId = "tradingTypeRadio1";
 
 function calcCost(){
@@ -80,4 +85,16 @@ function calcLotSize(){
     $("#lotRiskedPer").text("Risked Per Share = Rs. "+ riskedPS);
     $("#lotMaxProfit").text("Max Profit Per Trade = Rs. "+ profitPT);
     $("#lotMaxLoss").text("Max Loss Per Trade = Rs. "+ lossPT);
+}
+
+function rca(){
+    
+    var rcaRupeeAmount = $("#rcaRupeeAmount").val();
+    var rcaBuyPrice = $("#rcaBuyPrice").val();
+    
+    var priceCost = (rcaBuyPrice * 1.0112).toFixed(2);
+    var rcaQuantity = (rcaRupeeAmount / priceCost).toFixed(2);
+
+    $("#rcaPriceCost").text("Price + Cost = Rs. "+ priceCost);
+    $("#rcaQuantity").text("Buying Quantity = " + rcaQuantity);
 }
